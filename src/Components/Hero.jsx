@@ -47,16 +47,16 @@ const Hero = ({ handleOrderPopup }) => {
   };
 
   return (
-    <div className="relative overflow-hidden max-w-[1440px] mx-auto min-h-[550px] sm:min-h-[650px] bg-gray-100 dark:bg-slate-900 dark:text-white duration-300">
+    <div className="relative w-full overflow-hidden max-w-[1440px] mx-auto min-h-[550px] sm:min-h-[650px] bg-gray-100 dark:bg-slate-900 dark:text-white duration-300">
       <div className="px-4 sm:px-10 lg:px-20 py-10">
         <Slider {...settings}>
           {ImageList.map((data) => (
             <div key={data.id}>
-              <div className="flex flex-col sm:flex-row items-center justify-center text-center sm:text-left sm:justify-between gap-10 sm:gap-20 min-h-[500px] sm:min-h-[600px]">
+              <div className="flex flex-col sm:flex-row items-center justify-center text-center sm:text-left sm:justify-between gap-6 sm:gap-10 lg:gap-20 min-h-[500px] sm:min-h-[600px]">
                 
                 {/* Text Section */}
-                <div className="flex-1 flex flex-col justify-center items-center sm:items-start" data-aos="fade-right">
-                  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4">
+                <div className="flex-1 flex flex-col justify-center items-center sm:items-start px-2" data-aos="fade-right">
+                  <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4">
                     {data.title}
                   </h1>
                   <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 mb-6 max-w-xl">
@@ -71,11 +71,11 @@ const Hero = ({ handleOrderPopup }) => {
                 </div>
 
                 {/* Image Section */}
-                <div className="flex-1 flex justify-center items-center" data-aos="fade-left">
+                <div className="flex-1 flex justify-center items-center px-2" data-aos="fade-left">
                   <img
                     src={data.img}
                     alt="Slide Visual"
-                    className="w-[260px] h-[260px] sm:w-[400px] sm:h-[400px] md:w-[480px] md:h-[480px] object-contain transition-all duration-500"
+                    className="max-w-[260px] sm:max-w-[400px] md:max-w-[480px] w-full h-auto object-contain transition-all duration-500"
                   />
                 </div>
               </div>
