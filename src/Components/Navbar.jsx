@@ -41,16 +41,18 @@ const Navbar = () => {
           ShopCom
         </Link>
 
+        {/* Show Hamburger Icon up to 990px */}
         <div
-          className='sm:hidden text-white text-2xl'
+          className='max-[990px]:block hidden text-white text-2xl'
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? <FaTimes /> : <FaBars />}
         </div>
 
+        {/* Desktop Menu for >=991px */}
         <ul
           data-aos="fade-in"
-          className='sm:flex hidden items-center gap-6 text-white'
+          className='hidden min-[991px]:flex items-center gap-6 text-white'
         >
           {Menu.map((data) => (
             <li key={data.id}>
@@ -65,7 +67,7 @@ const Navbar = () => {
         </ul>
 
         {/* Desktop Auth Buttons */}
-        <div className='hidden sm:flex items-center gap-4'>
+        <div className='hidden min-[991px]:flex items-center gap-4'>
           <Link
             data-aos="fade-left"
             to="/login"
@@ -83,9 +85,9 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu for <=990px */}
       {menuOpen && (
-        <div className='sm:hidden bg-indigo-500 px-4 py-4 text-white'>
+        <div className='max-[990px]:block hidden bg-indigo-500 px-4 py-4 text-white'>
           <ul className='space-y-4'>
             {Menu.map((data) => (
               <li key={data.id}>
@@ -100,16 +102,16 @@ const Navbar = () => {
           </ul>
 
           {/* Mobile Auth Buttons */}
-          <div className='mt-6 flex gap-4'>
+          <div className='mt-6 flex flex-col gap-4'>
             <Link
               to="/login"
-              className='flex-1 bg-white text-center text-indigo-600 py-2 rounded-full font-semibold hover:bg-indigo-100'
+              className='bg-white text-center text-indigo-600 py-2 rounded-full font-semibold hover:bg-indigo-100'
             >
               Login
             </Link>
             <Link
               to="/signup"
-              className='flex-1 bg-yellow-300 text-center text-black py-2 rounded-full font-semibold hover:bg-yellow-400'
+              className='bg-yellow-300 text-center text-black py-2 rounded-full font-semibold hover:bg-yellow-400'
             >
               SignUp
             </Link>

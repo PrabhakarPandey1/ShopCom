@@ -47,7 +47,7 @@ const Hero = ({ handleOrderPopup }) => {
   };
 
   return (
-    <div className="relative w-full overflow-hidden max-w-[1440px] mx-auto min-h-[550px] sm:min-h-[650px] bg-gray-100 dark:bg-slate-900 dark:text-white duration-300">
+    <div className="relative w-full overflow-hidden max-w-[1440px] mx-auto min-h-[550px] sm:min-h-[650px] bg-gray-100 dark:bg-slate-900 dark:text-white duration-300 pt-20 sm:pt-0">
       <div className="px-4 sm:px-10 lg:px-20 py-10">
         <Slider {...settings}>
           {ImageList.map((data) => (
